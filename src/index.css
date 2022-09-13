@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+ul {list-style-type: none;}
+
+
+.nav-container{
+  display: flex;
+  list-style-type: none;
+  background-color: #B5838D;
+  justify-content: flex-end;
+  padding: 1.5rem 1rem;
+  border-radius: 25px;
+}
+
+.nav-item {
+  margin: 0rem 1rem;
+}
+
+.url {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.background-images{
+  width: 99%;
+  height:auto;
+  border-radius: 25px;
+}
+
+.media-nav{
+  justify-content: space-evenly;
+}
+
+.clock{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 30px;
+  padding: 0.4rem 2rem 0.4rem 2rem;
+  color: black;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.clock:hover 
+{
+  transform: scale(1.1);
+  filter: drop-shadow(2px 3px 3px #333);
+}
+
+audio:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(2px 3px 3px #333);
+}
+
+button{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 30px;
+  padding: 0.4rem 3rem 0.4rem 3rem;
+  color: black;
+  background-color: white;
+  border-radius: 15px;
+}
+
+button:hover{
+  transform: scale(1.1);
+  filter: drop-shadow(2px 3px 3px #333);
+}

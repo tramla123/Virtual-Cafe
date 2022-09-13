@@ -13,7 +13,7 @@ import SelectBackground from './components/Background/SelectBackground';
 
 function App() {
 
-  const [showSelectBackGround, setSelectBackGround] = useState (false)
+  const [showSelectBackGround, setSelectBackGround] = useState (true)
 
   const backgrounds = [
     {
@@ -43,12 +43,24 @@ function App() {
     }  
   ]
 
+  const [background, setBackground] = useState(
+    {
+      id: 2,
+      description: "Drawing of Library",
+      path: Library
+    })
+
+  const changeBackground = (item) => {
+    setBackground(item)
+  }
+
   return (
     <div className="App">
       <Header />
       {showSelectBackGround && <SelectBackground allBackgrounds={backgrounds}
-        closeSelect={() => setSelectBackGround(!showSelectBackGround)}/>}
-      <Background background={backgrounds[2]}/>
+        closeSelect={() => setSelectBackGround(!showSelectBackGround)} 
+        setBackground={changeBackground}/>}
+      <Background background={background}/>
       <MediaNav openSelect={() => setSelectBackGround(!showSelectBackGround)} showAdd={showSelectBackGround}/>
     </div>
   );

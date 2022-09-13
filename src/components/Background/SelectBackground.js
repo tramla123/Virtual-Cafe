@@ -1,7 +1,7 @@
 import BackgroundIcon from "./BackgroundIcon"
 import './Background.css'
 
-const SelectBackground = ({allBackgrounds, closeSelect}) => {
+const SelectBackground = ({allBackgrounds, closeSelect, setBackground}) => {
   return (
       <div className="popup-inner">
         <div className="popup-header">
@@ -15,7 +15,8 @@ const SelectBackground = ({allBackgrounds, closeSelect}) => {
             <ul>
               {allBackgrounds.map((task) => (
                 <li key={task.id}>
-                  <BackgroundIcon allBackgrounds={allBackgrounds} background={task}/>
+                  <BackgroundIcon allBackgrounds={allBackgrounds} background={task}
+                      setBackground={setBackground}/>
                 </li>
               ))}
             </ul>

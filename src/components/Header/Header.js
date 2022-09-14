@@ -1,19 +1,19 @@
 
-const Header = () => {
+const Header = ( {toggleLogIn} ) => {
   return (
     <header >
         <ul className='nav-container'>
             <li className='nav-item'>  
-                <a className='url' href="/"> Planner </a>
+                <p className='header-items' > Set Timer </p>
             </li>
             <li className='nav-item'>  
-                <a className='url' href="/"> Timer </a>
+                <p className='header-items' > To-Do List </p>
             </li>
             <li className='nav-item'>  
-                <a className='url' href="/"> Store </a>
+                <p className='header-items' > Shop </p>
             </li>
             <li className='nav-item'>  
-                <a className='url' href="/"> Sign in </a>
+                <p className='header-items' onClick={toggleLogIn}> Sign In </p>
             </li>
         </ul>
     </header>

@@ -1,13 +1,11 @@
-import React from 'react'
 
-
-const BackgroundIcon = ({ background, setBackground }) => {
+const BackgroundIcon = ({ background, setBackground, closeSelect }) => {
 
     return (
         <span className='background-info'>
             <img className='icon' src={background.path} 
                 alt={background.description}
-                onClick={ () => setBackground(background) }
+                onClick={ () => {setBackground(background); closeSelect()} }
                 />
         </span>
     )

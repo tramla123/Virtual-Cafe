@@ -1,12 +1,9 @@
 import React from 'react'
-import Song from '../assets/audio/Intellect.mp3'
+import Song from '../../assets/audio/Intellect.mp3'
 import Clock from './Clock'
-import SelectBackground from './Background/SelectBackground'
-import Button from './Button'
-import { useState, useEffect } from 'react';
+import Button from '../Button'
 
 const MediaNav = ( {openSelect, showAdd} ) => {
-  const [showSelectBackGround, setSelectBackGround] = useState (false)
 
   return (
     <div>

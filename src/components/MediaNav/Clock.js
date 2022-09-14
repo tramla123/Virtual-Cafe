@@ -7,8 +7,7 @@ function Clock() {
     useEffect(() => {
         setInterval(() => {
             const date = new Date();
-            const dateWithSpace = date.toLocaleTimeString().split('').join(' ');
-            setClockState(dateWithSpace)
+            setClockState(date.toLocaleTimeString())
         },);
     }, []);
 

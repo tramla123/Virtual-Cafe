@@ -1,0 +1,38 @@
+.popup-login {
+    position: absolute;
+    top: 25%;
+    bottom: 45%;
+    left: 35%;
+    right: 35%;
+    border: 1px solid #ccc;
+    background: #fff;
+    outline: none;
+    padding: 0.5rem;
+    border-radius: 30px;
+    z-index: 1;
+  }
+  
+.popup-top {
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color:#B5838D;
+    padding: 0.5rem;
+    border-radius: 15px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.sign-in-header {
+  display: flex;
+  flex-grow: 1;
+  cursor: pointer;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-in-header:hover {
+  color:white;
+  transform: scale(1.1);
+  filter: drop-shadow(2px 3px 3px #333);
+}

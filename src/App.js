@@ -1,19 +1,23 @@
 import './App.css';
-import { useState, useEffect } from 'react';
-import Header from './components/Header';
-import MediaNav from './components/MediaNav';
+import { useState } from 'react';
+import Header from './components/Header/Header';
+import MediaNav from './components/MediaNav/MediaNav';
+import SelectBackground from './components/Background/SelectBackground';
 import Background from './components/Background/Background';
+import SignInModal from './components/Header/SignInModal';
 import Library from "./assets/images/library.jpeg";
 import RainGIF from "./assets/images/raincafe.gif";
 import StudyGIF1 from "./assets/images/pixel-study.gif";
 import StudyGIF2 from "./assets/images/studying-guy.gif";
 import StudyGIF3 from "./assets/images/student-studying.gif";
-import SelectBackground from './components/Background/SelectBackground';
+
 
 
 function App() {
 
   const [showSelectBackGround, setSelectBackGround] = useState (true)
+  const [showLogInModal, setShowLogInModal] = useState(false)
+  const [showSignIn, setShowSignIn] = useState(true)
 
   const backgrounds = [
     {
@@ -45,21 +49,30 @@ function App() {
 
   const [background, setBackground] = useState(
     {
-      id: 2,
-      description: "Drawing of Library",
-      path: Library
+      id: 3,
+      description: "Student studying GIF",
+      path: StudyGIF1
     })
 
   const changeBackground = (item) => {
     setBackground(item)
   }
 
+  const checkSignInState = () => {
+    return showSignIn
+  }
+
   return (
     <div className="App">
-      <Header />
+      <Header toggleLogIn={() => setShowLogInModal(!showLogInModal)} />
+      
       {showSelectBackGround && <SelectBackground allBackgrounds={backgrounds}
         closeSelect={() => setSelectBackGround(!showSelectBackGround)} 
         setBackground={changeBackground}/>}
+      
+      {showLogInModal && <SignInModal showLogIn={ () => setShowLogInModal(!showLogInModal)}
+      toggleSignIn={ () => setShowSignIn(!showSignIn)} checkSignInState={checkSignInState} />}
+      
       <Background background={background}/>
       <MediaNav openSelect={() => setSelectBackGround(!showSelectBackGround)} showAdd={showSelectBackGround}/>
     </div>

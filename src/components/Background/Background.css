@@ -1,21 +1,29 @@
+.popup {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  z-index: 1;
+}
 
 .popup-inner {
   position: absolute;
-  top: 300px;
+  top: 280px;
   left: 350px;
   right: 350px;
-  bottom: 300px;
+  bottom: 280px;
   border: 1px solid #ccc;
   background: #fff;
   outline: none;
   padding: 20px;
   border-radius: 30px;
-  z-index: 1;
 }
 
 .popup-header{
-  background-color:pink;
-  padding: 1rem;
+  background-color:#B5838D;
+  padding: 0.5rem;
   border-radius: 25px;
 }
 
@@ -37,22 +45,6 @@
   padding-right:1rem;
 }
 
-.select-background-ul{
-    list-style-type: none;
-  }
-
-
-.background-info {
-    padding: 1rem;
-}
-
-
-.popup-inner .close-button {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-}
-
 .icon{
   width: 80%;
   height:20%;
@@ -68,4 +60,22 @@
 
 .title {
     font-family: Open Sans Condensed, sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.x-icon {
+  margin: 1rem 1rem 0rem 0rem;
+  font-size: 30px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: black;
+}
+
+.x-icon:hover{
+  cursor: pointer;
+  color:white;
+  transform: scale(1.1);
+  filter: drop-shadow(2px 3px 3px #333);
 }

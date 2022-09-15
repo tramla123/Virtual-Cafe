@@ -19,7 +19,6 @@
     background-color:#B5838D;
     padding: 0.5rem;
     border-radius: 15px;
-    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .sign-in-header {
@@ -27,12 +26,47 @@
   flex-grow: 1;
   cursor: pointer;
   padding: 0.5rem;
-  align-items: center;
   justify-content: center;
 }
 
 .sign-in-header:hover {
   color:white;
+  transform: scale(1.1);
+  filter: drop-shadow(2px 3px 3px #333);
+}
+
+.password-outter {
+  position:relative
+}
+
+.input-box {
+  margin-top: 0px;
+  padding: 0px;
+  width: 70%;
+  outline: none;
+  border-radius: 10px;
+  height:30px;
+  padding:0.5rem;
+  font-size: 1rem;
+}
+
+.show-hide {
+  position: absolute;
+  top: 0;
+  border-radius: 5px;
+  right:15%;
+  z-index:2;
+  border:none;
+  top: 2px;
+  cursor: pointer;
+  color:black;
+  padding:0.5rem;
+  background-color: white;
+  font-size: 1rem;
+  margin-top:0.2rem;
+}
+
+.show-hide:hover{
   transform: scale(1.1);
   filter: drop-shadow(2px 3px 3px #333);
 }

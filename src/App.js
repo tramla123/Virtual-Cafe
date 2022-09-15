@@ -15,7 +15,7 @@ import StudyGIF3 from "./assets/images/student-studying.gif";
 
 function App() {
 
-  const [showSelectBackGround, setSelectBackGround] = useState (true)
+  const [showSelectBackGround, setSelectBackGround] = useState (false)
   const [showLogInModal, setShowLogInModal] = useState(false)
   const [showSignIn, setShowSignIn] = useState(true)
 
@@ -70,7 +70,7 @@ function App() {
         closeSelect={() => setSelectBackGround(!showSelectBackGround)} 
         setBackground={changeBackground}/>}
       
-      {showLogInModal && <SignInModal showLogIn={ () => setShowLogInModal(!showLogInModal)}
+      {showLogInModal && <SignInModal toggleLogIn={ () => setShowLogInModal(!showLogInModal)}
       toggleSignIn={ () => setShowSignIn(!showSignIn)} checkSignInState={checkSignInState} />}
       
       <Background background={background}/>

@@ -1,7 +1,7 @@
 
 const Header = ( {toggleLogIn} ) => {
   return (
-    <header >
+    <div>
         <ul className='nav-container'>
             <li className='nav-item'>  
                 <p className='header-items' > Set Timer </p>
@@ -16,7 +16,7 @@ const Header = ( {toggleLogIn} ) => {
                 <p className='header-items' onClick={toggleLogIn}> Sign In </p>
             </li>
         </ul>
-    </header>
+    </div>
   )
 }
 

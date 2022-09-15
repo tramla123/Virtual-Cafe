@@ -8,7 +8,7 @@ const SelectBackground = ({allBackgrounds, closeSelect, setBackground}) => {
         <div className="popup-inner">
           <div className="popup-header">
             <h5 className='title'> Select a Background</h5>
-            <div className='close-button'>
+            <div>
               <FaTimes className="x-icon" onClick={closeSelect} />
             </div>
           </div>

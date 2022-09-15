@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import axios from "axios";
 
 const SignIn = ( { checkUser } ) => {
 
@@ -23,7 +24,6 @@ const SignIn = ( { checkUser } ) => {
   }
 
   return (
-    console.log(username),
     <form onSubmit={onSubmit}>
         <div>
           <label htmlFor="username"> Username: </label><br/>

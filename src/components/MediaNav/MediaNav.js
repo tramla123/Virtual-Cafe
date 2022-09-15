@@ -1,7 +1,6 @@
 import React from 'react'
 import Song from '../../assets/audio/Intellect.mp3'
 import Clock from './Clock'
-import Button from '../Button'
 
 const MediaNav = ( {openSelect, showAdd} ) => {
 

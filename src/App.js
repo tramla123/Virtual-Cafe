@@ -12,7 +12,6 @@ import StudyGIF2 from "./assets/images/studying-guy.gif";
 import StudyGIF3 from "./assets/images/student-studying.gif";
 
 
-
 function App() {
 
   const [showSelectBackGround, setSelectBackGround] = useState (false)
@@ -61,6 +60,7 @@ function App() {
   const checkSignInState = () => {
     return showSignIn
   }
+
 
   return (
     <div className="App">

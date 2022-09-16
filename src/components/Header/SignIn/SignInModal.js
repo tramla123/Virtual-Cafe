@@ -1,4 +1,4 @@
-import "./Header.css"
+import "../Header.css"
 import SignIn from "./SignIn"
 import SignUp from "./SignUp"
 import { FaTimes } from 'react-icons/fa'

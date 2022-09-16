@@ -4,7 +4,8 @@ import Header from './components/Header/Header';
 import MediaNav from './components/MediaNav/MediaNav';
 import SelectBackground from './components/Background/SelectBackground';
 import Background from './components/Background/Background';
-import SignInModal from './components/Header/SignInModal';
+import SignInModal from './components/Header/SignIn/SignInModal';
+import Timer from './components/Timer/Timer';
 import Library from "./assets/images/library.jpeg";
 import RainGIF from "./assets/images/raincafe.gif";
 import StudyGIF1 from "./assets/images/pixel-study.gif";
@@ -73,7 +74,12 @@ function App() {
       {showLogInModal && <SignInModal toggleLogIn={ () => setShowLogInModal(!showLogInModal)}
       toggleSignIn={ () => setShowSignIn(!showSignIn)} checkSignInState={checkSignInState} />}
       
-      <Background background={background}/>
+      <div className="grid-container">
+        <div>
+          <Timer/>
+        </div>
+        <Background background={background}/>
+      </div>
       <MediaNav openSelect={() => setSelectBackGround(!showSelectBackGround)} showAdd={showSelectBackGround}/>
     </div>
   );

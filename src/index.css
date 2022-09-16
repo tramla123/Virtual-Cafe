@@ -31,10 +31,20 @@ ul {list-style-type: none;}
   cursor: pointer;
 }
 
+.grid-container {
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
 .background-images{
   width: 99%;
   height:auto;
   border-radius: 25px;
+  padding-left:0.5rem;
+  grid-area: 1 / 2 / 3 / 3;
 }
 
 .media-nav{
@@ -42,7 +52,7 @@ ul {list-style-type: none;}
 }
 
 .clock{
-  font-size: 30px;
+  font-size: 2rem;
   padding: 0.4rem 2rem 0.4rem 2rem;
   color: black;
   background-color: white;

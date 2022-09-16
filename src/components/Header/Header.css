@@ -39,6 +39,15 @@
   position:relative
 }
 
+.input-title {
+  position:absolute;
+  left: 15%;
+  z-index: 1;
+  top:28%;
+  font-size: 1.2rem;
+
+}
+
 .input-box {
   margin-top: 0px;
   padding: 0px;
@@ -49,6 +58,7 @@
   padding:0.5rem;
   font-size: 1rem;
 }
+
 
 .show-hide {
   position: absolute;

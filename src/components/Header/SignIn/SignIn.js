@@ -9,36 +9,27 @@ const SignIn = ( { checkUser } ) => {
   
   const onSubmit = (e) => {
     e.preventDefault()
-    if(!username && !password)
-      alert("Please enter a valid username and password")
-    else if(!username)
-      alert("Please enter a valid username")
-    else if(!password)
-      alert("Please enter a valid password")
-    // checkUser({username, password})
-    else {
-      setUsername('')
-      setPassword('')
-      toggleShowPassword(false)
-    }
+    setUsername('')
+    setPassword('')
+    toggleShowPassword(false)
   }
 
   return (
     <form onSubmit={onSubmit}>
-        <div>
-          <label htmlFor="username"> Username: </label><br/>
+        <div className="input-item">
+          <label htmlFor="username" className="input-title"> Username: </label><br/>
           <input type="text" id="username" name="username" className='input-box'
             onChange={(e) => setUsername(e.target.value)}/><br/>
         </div>
-        <div>
-          <label htmlFor="password"> Password: </label><br/>
+        <div className="input-item">
+          <label htmlFor="password" className="input-title"> Password: </label><br/>
           <div className='password-outter'>
-            <input type={showPassword ? "password" : "text"} onChange={(e) => setPassword(e.target.value)}
+            <input type={showPassword ? "text" : "password"} onChange={(e) => setPassword(e.target.value)}
               id="password" name="password" className='input-box'/><br/>
             <button 
               className="show-hide"
-              onClick={ (e) => toggleShowPassword(!showPassword)}>
-              {showPassword ? "SHOW" : "HIDE"}
+              onClick={ () => toggleShowPassword(!showPassword)}>
+              {showPassword ? "HIDE" : "SHOW"}
             </button>
           </div>
         </div>

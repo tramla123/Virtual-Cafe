@@ -3,11 +3,13 @@ import SignIn from "./SignIn"
 import SignUp from "./SignUp"
 import { FaTimes } from 'react-icons/fa'
 
-const SignInModal = ({ toggleLogIn, toggleSignIn, checkSignInState }) => {
+const SignInModal = ({ resetModal, toggleSignIn, checkSignInState, 
+                        checkSuccess, setSuccess }) => {
+
   return (
     <div className="popup-login">
         <div>
-          <FaTimes className="x-icon" onClick={toggleLogIn} />
+          <FaTimes className="x-icon" onClick={resetModal} />
         </div>
         <ul className="popup-top">
           <li className="sign-in-header" 
@@ -19,7 +21,8 @@ const SignInModal = ({ toggleLogIn, toggleSignIn, checkSignInState }) => {
             Sign Up
           </li>
         </ul>
-        {checkSignInState() && <SignIn/>}
+        {checkSignInState() && <SignIn checkSuccess={checkSuccess} setSuccess={setSuccess} 
+          resetModal={resetModal}/>}
         {!checkSignInState() && <SignUp/> }
 
     </div>

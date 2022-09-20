@@ -19,6 +19,8 @@ function App() {
   const [showSelectBackGround, setSelectBackGround] = useState (false)
   const [showLogInModal, setShowLogInModal] = useState(false)
   const [showSignIn, setShowSignIn] = useState(true)
+  const [successLogIn, setSucces] = useState(false)
+  const [startTimer, setStartTimer] = useState(false)
 
   const backgrounds = [
     {
@@ -47,7 +49,6 @@ function App() {
       path: StudyGIF3
     }  
   ]
-
   const [background, setBackground] = useState(
     {
       id: 3,
@@ -63,7 +64,16 @@ function App() {
     return showSignIn
   }
 
+  const checkSuccessLogIn = () => {
+    return successLogIn
+    }
+  
+  let resetLogInModal = () => {
+    setShowLogInModal(!showLogInModal);
+    setShowSignIn(true);
+  }
 
+  console.log(successLogIn)
   return (
     <div className="App">
       <Header toggleLogIn={() => setShowLogInModal(!showLogInModal)} />
@@ -72,12 +82,17 @@ function App() {
         closeSelect={() => setSelectBackGround(!showSelectBackGround)} 
         setBackground={changeBackground}/>}
       
-      {showLogInModal && <SignInModal toggleLogIn={ () => setShowLogInModal(!showLogInModal)}
-      toggleSignIn={ () => setShowSignIn(!showSignIn)} checkSignInState={checkSignInState} />}
+      {showLogInModal && !successLogIn && <SignInModal resetModal={resetLogInModal}
+      toggleSignIn={ () => setShowSignIn(!showSignIn)} checkSignInState={checkSignInState}  
+      checkSuccess={checkSuccessLogIn} setSuccess={ () => setSucces(!successLogIn)}/>}
       
       <div className="grid-container">
           <div>
-            <Timer/>
+            {!startTimer && <button 
+              onClick={() => setStartTimer(!startTimer)} className="time-container timer"
+                style={{fontSize:'2rem', padding:'1rem', marginTop:'3rem' }}> 
+              Start Timer </button>}
+            {startTimer && <Timer/>}
           </div>
           <div>
             <Snacks/>

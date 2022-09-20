@@ -1,5 +1,6 @@
 
-const Header = ( {toggleLogIn} ) => {
+const Header = ( { toggleLogIn } ) => {
+
   return (
     <div>
         <ul className='nav-container'>

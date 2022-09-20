@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize";
  
-const db = new Sequelize('virtualcafe_db', 'virtual_cafe', 'my$6cafe', {
+const db = new Sequelize('virtualcafe_db', '', '', {
     host: "localhost",
     dialect: "mysql"
 });

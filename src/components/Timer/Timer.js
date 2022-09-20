@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import './Timer.css'
 
-const Timer = () => {
+const Timer = ( ) => {
 
     const [studyTime, setStudyTime] = useState(true)
     const [minutes, setMinutes] = useState(50)

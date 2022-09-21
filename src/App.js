@@ -6,6 +6,7 @@ import SelectBackground from './components/Background/SelectBackground';
 import Background from './components/Background/Background';
 import Snacks from './components/Snacks/Snacks';
 import SignInModal from './components/Header/SignIn/SignInModal';
+import SetTimeSetting from './components/Timer/SetTimeSetting';
 import Timer from './components/Timer/Timer';
 import Library from "./assets/images/library.jpeg";
 import RainGIF from "./assets/images/raincafe.gif";
@@ -17,9 +18,14 @@ import StudyGIF3 from "./assets/images/student-studying.gif";
 function App() {
 
   const [showSelectBackGround, setSelectBackGround] = useState (false)
+  
   const [showLogInModal, setShowLogInModal] = useState(false)
   const [showSignIn, setShowSignIn] = useState(true)
   const [successLogIn, setSucces] = useState(false)
+  
+  const [studyTime, setStudyTime] = useState(50)
+  const [breakTime, setBreakTime] = useState(15) 
+  const [timerSetting, toggleTimerSetting] = useState(false)
   const [startTimer, setStartTimer] = useState(false)
 
   const backgrounds = [
@@ -73,15 +79,21 @@ function App() {
     setShowSignIn(true);
   }
 
-  console.log(successLogIn)
+
   return (
     <div className="App">
-      <Header toggleLogIn={() => setShowLogInModal(!showLogInModal)} />
+      <Header toggleLogIn={() => setShowLogInModal(!showLogInModal)} 
+              toggleTimerSetting={()=> toggleTimerSetting(!timerSetting)}/>
       
       {showSelectBackGround && <SelectBackground allBackgrounds={backgrounds}
         closeSelect={() => setSelectBackGround(!showSelectBackGround)} 
         setBackground={changeBackground}/>}
       
+      {timerSetting && <SetTimeSetting 
+        toggleTimerSetting={()=> toggleTimerSetting(!timerSetting)}
+        setStudyTime={setStudyTime} setBreakTime={setBreakTime}
+        setStartTimer={() => setStartTimer(!startTimer)}/>}
+
       {showLogInModal && !successLogIn && <SignInModal resetModal={resetLogInModal}
       toggleSignIn={ () => setShowSignIn(!showSignIn)} checkSignInState={checkSignInState}  
       checkSuccess={checkSuccessLogIn} setSuccess={ () => setSucces(!successLogIn)}/>}
@@ -92,7 +104,7 @@ function App() {
               onClick={() => setStartTimer(!startTimer)} className="time-container timer"
                 style={{fontSize:'2rem', padding:'1rem', marginTop:'3rem' }}> 
               Start Timer </button>}
-            {startTimer && <Timer/>}
+            {startTimer && <Timer initialStudy={studyTime} initialBreak={breakTime} />}
           </div>
           <div>
             <Snacks/>

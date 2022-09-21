@@ -2,10 +2,10 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import './Timer.css'
 
-const Timer = ( ) => {
+const Timer = ( {initialStudy, initialBreak} ) => {
 
     const [studyTime, setStudyTime] = useState(true)
-    const [minutes, setMinutes] = useState(50)
+    const [minutes, setMinutes] = useState(initialStudy)
     const [seconds, setSeconds] = useState(0)
     
     var timer;
@@ -18,9 +18,9 @@ const Timer = ( ) => {
                 if(minutes === 0)
                 {
                     if(studyTime)
-                        setMinutes(14)
+                        setMinutes(initialBreak-1)
                     else 
-                        setMinutes(49)
+                        setMinutes(initialStudy-1)
                     setSeconds(59)
                     setStudyTime(!studyTime)
                 }
@@ -44,5 +44,6 @@ const Timer = ( ) => {
     </div>
   )
 }
+
 
 export default Timer

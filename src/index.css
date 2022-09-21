@@ -51,6 +51,31 @@ ul {list-style-type: none;}
   justify-content: space-evenly;
 }
 
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  position: absolute;
+  top: 25%;
+  bottom: 45%;
+  left: 35%;
+  right: 35%;
+  border: 1px solid #ccc;
+  background: #fff;
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 30px;
+}
+
 .clock{
   font-size: 2rem;
   padding: 0.4rem 2rem 0.4rem 2rem;

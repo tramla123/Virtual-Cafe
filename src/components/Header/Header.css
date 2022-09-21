@@ -1,16 +1,3 @@
-.popup-login {
-    position: absolute;
-    top: 25%;
-    bottom: 45%;
-    left: 35%;
-    right: 35%;
-    border: 1px solid #ccc;
-    background: #fff;
-    outline: none;
-    padding: 0.5rem;
-    border-radius: 30px;
-    z-index: 1;
-  }
   
 .popup-top {
     display:flex;
@@ -45,7 +32,6 @@
   z-index: 1;
   top:28%;
   font-size: 1.2rem;
-
 }
 
 .input-box {

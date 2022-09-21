@@ -19,3 +19,12 @@
     transform: scale(1.1);
     filter: drop-shadow(2px 3px 3px #333);
 }
+
+.modal-top {
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color:#B5838D;
+    padding: 0.5rem;
+    border-radius: 20px;
+}

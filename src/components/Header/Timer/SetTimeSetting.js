@@ -19,7 +19,7 @@ const SetTimeSetting = ( { toggleTimerSetting, setStudyTime, setBreakTime, setSt
             <div className="modal-content">
                 <form onSubmit={setTimer}>
                     <div className="modal-top">
-                        <FaTimes className="x-icon" onClick={toggleTimerSetting} />
+                        <FaTimes className="x-icon" onClick={toggleTimerSetting}/>
                         <h2>Timer Setting</h2>
                     </div>
                     <div style={{padding:"1rem"}}>

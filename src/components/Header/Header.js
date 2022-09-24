@@ -1,5 +1,4 @@
-
-const Header = ( { toggleLogIn, toggleTimerSetting } ) => {
+const Header = ( { toggleLogIn, toggleTimerSetting, toggleToDo } ) => {
 
   return (
     <div>
@@ -8,7 +7,7 @@ const Header = ( { toggleLogIn, toggleTimerSetting } ) => {
                 <p className='header-items' onClick={toggleTimerSetting}> Timer </p>
             </li>
             <li className='nav-item'>  
-                <p className='header-items'> To-Do List </p>
+                <p className='header-items' onClick={toggleToDo}> To-Do List </p>
             </li>
             {/* <li className='nav-item'>  
                 <p className='header-items' > Shop </p>

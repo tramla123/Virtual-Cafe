@@ -6,7 +6,7 @@ const SignUp = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [showPassword, toggleShowPassword] = useState(false)
-
+  
   const addUser = async (e) =>  {
     e.preventDefault()
     console.log(username)

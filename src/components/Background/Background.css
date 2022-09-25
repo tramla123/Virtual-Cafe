@@ -10,10 +10,10 @@
 
 .popup-inner {
   position: absolute;
-  top: 280px;
-  left: 350px;
-  right: 350px;
-  bottom: 280px;
+  top: 15%;
+  left: 35%;
+  right: 35%;
+  bottom: 15%;
   border: 1px solid #ccc;
   background: #fff;
   outline: none;
@@ -29,7 +29,7 @@
 
 .popup-list-outer{
   position: relative;
-  height: 425px;
+  height: 60%;
   border: 1px solid #ccc;
   background: #fff;
   outline: none;
@@ -39,7 +39,7 @@
 }
 
 .popup-list {
-  height: 420px;
+  height: 100%;
   overflow: auto;
   -webkit-overflow-scrolling: 'touch';
   padding-right:1rem;
@@ -47,7 +47,7 @@
 
 .icon{
   width: 80%;
-  height:20%;
+  height: auto;
   border-radius: 25px;
   padding: 1rem;
 }

@@ -1,34 +1,26 @@
 import { useState, useEffect } from "react"
 import { FaTimes } from 'react-icons/fa'
 
-const AddTask = ({toggleAddTask, addTask}) => {
+const AddTask = ({addTask}) => {
     const [task, setTask] = useState('')
-    const [taskAdded, setTaskAdded] = useState(false)
     const onSubmit = (e) => {
         e.preventDefault()
         addTask(task)
         setTask("")
-        setTaskAdded(!taskAdded)
     }
-
-    useState(() => {
-        if(task)
-            setTaskAdded(!taskAdded)
-    })
 
   return (
     <div>
         <form onSubmit={onSubmit}>
-            <div>
-                <h3>Add Task</h3>
-                <FaTimes className="x-icon" onClick={toggleAddTask}/>
-            </div>
-            <label htmlFor="taskname"> Type your task below: </label><br/>
-            <input type="text" id="taskname" required value={task}
-                onChange={(e) => setTask(e.target.value)}/>
-            <input type="submit" value="Save"/>
+            <fieldset style={{borderRadius:"20px"}}>
+                <legend>Add Task</legend>
+                <input type="text" required value={task}
+                    onChange={(e) => setTask(e.target.value)}
+                    className="add-task-box"
+                    placeholder="Enter your task..."/>
+                <input type="submit" value="Add"/>
+            </fieldset>
         </form>
-        {taskAdded && <p>Task Added Successfully!</p>}
     </div>
   )
 }

@@ -1,10 +1,14 @@
 .timer-container {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: #D1B3C4;
-    padding:3rem 1rem 3rem 1rem;
+    padding:1rem;
     border-radius: 25px;
     letter-spacing: 2px;
+    margin-bottom: 1rem;
+    border: 1px solid;
+}
+
+.timer-inner {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .timer {

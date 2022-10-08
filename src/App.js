@@ -6,8 +6,8 @@ import SelectBackground from './components/Background/SelectBackground';
 import Background from './components/Background/Background';
 import SignInModal from './components/Header/SignIn/SignInModal';
 import Tasks from './components/ToDoList/Tasks';
-import SetTimeSetting from './components/Header/Timer/SetTimeSetting';
-import Timer from './components/Header/Timer/Timer';
+import SetTimeSetting from './components/Timer/SetTimeSetting';
+import Timer from './components/Timer/Timer';
 import Library from "./assets/images/library.jpeg";
 import RainGIF from "./assets/images/raincafe.gif";
 import StudyGIF1 from "./assets/images/pixel-study.gif";
@@ -106,16 +106,16 @@ function App() {
         setStartTimer={() => setStartTimer(!startTimer)}/>}
     
       <div className="grid-container">
-          <div>
-            {!startTimer && <button 
-              onClick={() => setStartTimer(!startTimer)} className="time-container timer"
-                style={{fontSize:'2rem', padding:'1rem', marginTop:'3rem' }}> 
-              Start Timer </button>}
-            {startTimer && <Timer initialStudy={studyTime} initialBreak={breakTime} />}
-          </div>
-          <div>
-            <Tasks tasks={tasks} onDelete={deleteTask} addTask={addTask}></Tasks>
-          </div>
+        <div className="timer-container">
+          {!startTimer && <button 
+            onClick={() => setStartTimer(!startTimer)} className="timer"
+              style={{fontSize:'2rem', padding:'1rem', margin:'1rem 0rem' }}> 
+            Start Timer </button>}
+          {startTimer && <Timer initialStudy={studyTime} initialBreak={breakTime} />}
+        </div>
+        <div>
+          <Tasks tasks={tasks} onDelete={deleteTask} addTask={addTask}></Tasks>
+        </div>
         <Background background={background}/>
       </div>
       <MediaNav openSelect={() => setSelectBackGround(!showSelectBackGround)} showAdd={showSelectBackGround}/>

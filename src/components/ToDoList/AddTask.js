@@ -9,11 +9,13 @@ const AddTask = ({ addTask, closeAdd }) => {
         setTask("")
     }
   return (
-    <div>
-        <FaTimes onClick={closeAdd}/>
+    <div className="add-task-container">
         <form onSubmit={onSubmit}>
-            <fieldset style={{borderRadius:"20px"}}>
-                <legend>Add Task</legend>
+            <fieldset style={{borderRadius:"20px", position:"relative"}}>
+                <legend> 
+                    Add Task
+                </legend>
+                <FaTimes className="close-add" onClick={closeAdd}/> 
                 <input type="text" required value={task}
                     onChange={(e) => setTask(e.target.value)}
                     className="add-task-box"

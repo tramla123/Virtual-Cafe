@@ -35,7 +35,7 @@ const Timer = ( {initialStudy, initialBreak} ) => {
     })
 
   return (
-    <div className="timer-container">
+    <div className="timer-inner">
         <h1 style={{paddingTop: '0.4rem'}}> {studyTime ? "Work Time:" : "Break Time:" } </h1>
         <h1 className="timer">
             {minutes >= 10 ? minutes : "0" + minutes}:

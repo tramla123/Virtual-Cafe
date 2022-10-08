@@ -34,7 +34,7 @@ ul {list-style-type: none;}
 .grid-container {
   display:grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: .5fr 1fr;
+  grid-template-rows: .2fr 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -43,7 +43,7 @@ ul {list-style-type: none;}
   width: 99%;
   height:auto;
   border-radius: 25px;
-  padding-left:0.5rem;
+  padding-left: 0.5rem;
   grid-area: 1 / 2 / 3 / 3;
 }
 

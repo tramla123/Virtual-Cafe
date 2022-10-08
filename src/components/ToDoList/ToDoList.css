@@ -1,0 +1,32 @@
+.task-outer {
+
+}
+
+.task-header {
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  border-radius: 20px;
+  border: 1px solid;
+}
+
+.add-task-box {
+  border:1px solid black;
+  width: 70%;
+  margin-right:1rem;
+  margin-bottom: 0.4rem;
+  padding: 0.5rem;
+  font-size: 16px;
+}
+
+.task-item {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: center;
+  text-align: start;
+  border-bottom: groove;
+}

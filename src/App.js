@@ -1,12 +1,11 @@
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Header from './components/Header/Header';
 import MediaNav from './components/MediaNav/MediaNav';
 import SelectBackground from './components/Background/SelectBackground';
 import Background from './components/Background/Background';
-import Snacks from './components/Snacks/Snacks';
 import SignInModal from './components/Header/SignIn/SignInModal';
-import Tasks from './components/Header/ToDoList/Tasks';
+import Tasks from './components/ToDoList/Tasks';
 import SetTimeSetting from './components/Header/Timer/SetTimeSetting';
 import Timer from './components/Header/Timer/Timer';
 import Library from "./assets/images/library.jpeg";
@@ -24,7 +23,6 @@ function App() {
   const [timerSetting, toggleTimerSetting] = useState(false)
   const [startTimer, setStartTimer] = useState(false)
 
-  const [showToDo, setShowToDo] = useState(false)
   const [tasks, setTasks] = useState([])
 
   const backgrounds = [
@@ -89,10 +87,14 @@ function App() {
     setTasks(tasks)
   }
 
+  useEffect(() => {
+    setTasks(fetchTasks())
+  }, []);
+
+
   return (
     <div className="App">
-      <Header toggleTimerSetting={()=> toggleTimerSetting(!timerSetting)}
-          toggleToDo={() => setShowToDo(!showToDo)}/>
+      <Header toggleTimerSetting={()=> toggleTimerSetting(!timerSetting)}/>
       
       {showSelectBackGround && <SelectBackground allBackgrounds={backgrounds}
         closeSelect={() => setSelectBackGround(!showSelectBackGround)} 
@@ -102,11 +104,7 @@ function App() {
         toggleTimerSetting={()=> toggleTimerSetting(!timerSetting)}
         setStudyTime={setStudyTime} setBreakTime={setBreakTime}
         setStartTimer={() => setStartTimer(!startTimer)}/>}
-      
-      {showToDo && <Tasks tasks={tasks} onDelete={deleteTask} addTask={addTask}
-            toggleToDo={() => setShowToDo(!showToDo)}></Tasks>}
     
-      
       <div className="grid-container">
           <div>
             {!startTimer && <button 
@@ -116,7 +114,7 @@ function App() {
             {startTimer && <Timer initialStudy={studyTime} initialBreak={breakTime} />}
           </div>
           <div>
-            <Snacks/>
+            <Tasks tasks={tasks} onDelete={deleteTask} addTask={addTask}></Tasks>
           </div>
         <Background background={background}/>
       </div>

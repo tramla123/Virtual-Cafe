@@ -16,7 +16,7 @@ const MediaNav = ( {openSelect, showAdd} ) => {
           </audio>
         </li>
         <li className='nav-item'>
-          <button className="button" onClick={openSelect}>Background</button>
+          <button className="button">Playlist</button>
         </li>
       </ul> 
     </div>

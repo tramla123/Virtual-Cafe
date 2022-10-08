@@ -94,7 +94,8 @@ function App() {
 
   return (
     <div className="App">
-      <Header toggleTimerSetting={()=> toggleTimerSetting(!timerSetting)}/>
+      <Header toggleTimerSetting={()=> toggleTimerSetting(!timerSetting)}
+              openSelect={() => setSelectBackGround(!showSelectBackGround)}/>
       
       {showSelectBackGround && <SelectBackground allBackgrounds={backgrounds}
         closeSelect={() => setSelectBackGround(!showSelectBackGround)} 
@@ -118,7 +119,7 @@ function App() {
         </div>
         <Background background={background}/>
       </div>
-      <MediaNav openSelect={() => setSelectBackGround(!showSelectBackGround)} showAdd={showSelectBackGround}/>
+      <MediaNav showAdd={showSelectBackGround}/>
     </div>
   );
 }

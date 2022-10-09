@@ -6,7 +6,7 @@ ul {list-style-type: none;}
   font-family: 'Open Sans Condensed', sans-serif !important;
 }
 
-.nav-container{
+.nav-container-media{
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
@@ -66,10 +66,6 @@ ul {list-style-type: none;}
   border-radius: 25px;
   padding-left: 0.5rem;
   grid-area: 1 / 2 / 3 / 3;
-}
-
-.media-nav{
-  justify-content: space-evenly;
 }
 
 .modal {

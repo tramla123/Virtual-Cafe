@@ -6,7 +6,7 @@ const MediaNav = ( {openSelect, showAdd} ) => {
  
   return (
     <div>
-      <ul className='nav-container media-nav'>
+      <ul className='nav-container-media'>
       <li className='nav-item'> 
           <Clock/>
         </li>

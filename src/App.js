@@ -4,16 +4,17 @@ import Header from './components/Header/Header';
 import MediaNav from './components/MediaNav/MediaNav';
 import SelectBackground from './components/Background/SelectBackground';
 import Background from './components/Background/Background';
-import SignInModal from './components/Header/SignIn/SignInModal';
 import Tasks from './components/ToDoList/Tasks';
 import SetTimeSetting from './components/Timer/SetTimeSetting';
 import Timer from './components/Timer/Timer';
-import Library from "./assets/images/library.jpeg";
-import RainGIF from "./assets/images/raincafe.gif";
+import SkyGIF from "./assets/images/sky-gif.gif";
 import StudyGIF1 from "./assets/images/pixel-study.gif";
 import StudyGIF2 from "./assets/images/studying-guy.gif";
 import StudyGIF3 from "./assets/images/student-studying.gif";
-
+import FoodGIF from "./assets/images/food-gif.gif";
+import Train from "./assets/images/train.gif";
+import CodingGIF from "./assets/images/coding.gif";
+import CoffeeGIF from "./assets/images/wind.gif";
 
 function App() {
   const [showSelectBackGround, setSelectBackGround] = useState (false)
@@ -28,13 +29,13 @@ function App() {
   const backgrounds = [
     {
       id: 1,
-      description: "GIF of raining day",
-      path: RainGIF
+      description: "GIF of a guy eating while watching TV",
+      path: FoodGIF
     },
     {
       id: 2,
-      description: "Drawing of Library",
-      path: Library
+      description: "GIF of girl studying",
+      path: SkyGIF
     },
     {
       id: 3,
@@ -50,14 +51,24 @@ function App() {
       id: 5,
       description: "Student studying GIF",
       path: StudyGIF3
-    }  
-  ]
-  const [background, setBackground] = useState(
+    },
     {
-      id: 3,
-      description: "Student studying GIF",
-      path: StudyGIF1
-    })
+      id: 6,
+      description: "GIF of a guy sitting by the window",
+      path: Train
+    },
+    {
+      id: 7,
+      description: "GIF of desktop by window with coding assignment on laptop screen",
+      path: CodingGIF
+    },
+    {
+      id: 8,
+      description: "GIF of guy drinking coffee by window",
+      path: CoffeeGIF
+    }
+  ]
+  const [background, setBackground] = useState(backgrounds[6])
 
   const changeBackground = (item) => {
     setBackground(item)

@@ -9,7 +9,7 @@ ul {list-style-type: none;}
 .nav-container{
   display: flex;
   list-style-type: none;
-  background-color: #B5838D;
+  background-color: #222222;
   justify-content: flex-end;
   padding: 0.5rem 1rem;
   border-radius: 25px;
@@ -22,6 +22,7 @@ ul {list-style-type: none;}
 .header-items {
   font-size: 25px;
   letter-spacing: 2px;
+  color: white;
 }
 
 .header-items:hover{

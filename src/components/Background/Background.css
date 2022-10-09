@@ -22,7 +22,7 @@
 }
 
 .popup-header{
-  background-color:#B5838D;
+  background-color:#3B3B3B;
   padding: 0.5rem;
   border-radius: 25px;
 }
@@ -61,6 +61,7 @@
 .title {
     font-size: 1.5rem;
     letter-spacing: 2px;
+    color: white;
 }
 
 .x-icon {
@@ -69,7 +70,7 @@
   position: absolute;
   top: 16px;
   right: 16px;
-  color: black;
+  color: white;
 }
 
 .x-icon:hover{

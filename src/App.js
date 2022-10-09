@@ -15,6 +15,8 @@ import FoodGIF from "./assets/images/food-gif.gif";
 import Train from "./assets/images/train.gif";
 import CodingGIF from "./assets/images/coding.gif";
 import CoffeeGIF from "./assets/images/wind.gif";
+import TwoPeopleStudying from "./assets/images/two-people-studying.gif"
+import BookFlying from "./assets/images/book-flying.gif"
 
 function App() {
   const [showSelectBackGround, setSelectBackGround] = useState (false)
@@ -66,6 +68,16 @@ function App() {
       id: 8,
       description: "GIF of guy drinking coffee by window",
       path: CoffeeGIF
+    },
+    {
+      id: 9,
+      description: "GIF of two people studying by the window",
+      path: TwoPeopleStudying
+    },
+    {
+      id: 10,
+      description: "GIF of guy reading by window with books floading around",
+      path: BookFlying
     }
   ]
   const [background, setBackground] = useState(backgrounds[6])

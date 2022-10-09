@@ -8,11 +8,30 @@ ul {list-style-type: none;}
 
 .nav-container{
   display: flex;
+  justify-content: space-evenly;
   list-style-type: none;
   background-color: #222222;
-  justify-content: flex-end;
   padding: 0.5rem 1rem;
   border-radius: 25px;
+}
+
+.nav-container-header{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  background-color: #222222;
+  padding: 0rem 1rem;
+  border-radius: 25px;
+  margin-bottom: 1rem;
+}
+
+.nav-list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .nav-item {
@@ -23,6 +42,7 @@ ul {list-style-type: none;}
   font-size: 25px;
   letter-spacing: 2px;
   color: white;
+  margin: 0;
 }
 
 .header-items:hover{

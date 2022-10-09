@@ -20,7 +20,7 @@ const SetTimeSetting = ( { toggleTimerSetting, setStudyTime, setBreakTime, setSt
                 <form onSubmit={setTimer}>
                     <div className="modal-top">
                         <FaTimes className="x-icon" onClick={toggleTimerSetting}/>
-                        <h2>Timer Setting</h2>
+                        <h2 style={{color:"white"}}>Timer Setting</h2>
                     </div>
                     <div style={{padding:"1rem"}}>
                         <label htmlFor="study"> Work Time (Minutes) </label><br/>

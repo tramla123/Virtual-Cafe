@@ -55,18 +55,22 @@
 }
 
 .task-list-outer{
-  position: relative;
-  height: 60%;
-  border: 1px solid #ccc;
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 25px;
+  height: 70%;
+  padding: 20px;
+  width: 85%;
   background: #fff;
   outline: none;
-  padding: 20px;
-  border-radius: 25px;
-  width: 85%;
   margin-bottom: 1rem;
 }
 
 .task-list-inner {
+  overflow: auto;
+  -webkit-overflow-scrolling: 'touch';
   padding-right:1rem;
 }
 
